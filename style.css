@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 550px));
+  justify-content: center;
+  margin-top: 30px;
+  padding: 20px;
+  gap: 20px;
+}
+
+article {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.user-box {
+  display: flex;
+  gap: 20px;
+}
+
+.user-box > figure > div {
+  width: 100px;
+  height: 100px;
+}
+
+.user-box > figure img {
+  width: 100%;
+  height: 100%;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.social-links li {
+  gap: 6ppx;
+}
+
+.social-links li img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-links a:focus-visible {
+  outline: 3px solid #ffa500;
+  outline-offset: 2px;
+}
+
+.section {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.heading,
+.bio,
+.time {
+  margin-bottom: 10px;
+}
+
+section div span {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+section div ul li:not(:last-child) {
+  margin-bottom: 2px;
+}

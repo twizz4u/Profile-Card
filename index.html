@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <article class="user-box" data-testid="test-profile-card">
+        <figure>
+          <div>
+            <img
+              src="https://avatar.iran.liara.run/public"
+              alt="avatar image"
+              data-testid="test-user-avatar"
+            />
+          </div>
+        </figure>
+        <div>
+          <h2
+            class="heading"
+            data-testid="test-user-name"
+            aria-label="username: Tiwa"
+          >
+            Tiwa
+          </h2>
+          <p class="bio" data-testid="test-user-bio">
+            My name Tiwa, I'm a frontend developer, I love creating beautiful
+            and functional web applications.
+          </p>
+          <span class="time" data-testid="test-user-time"
+            >Current time: 1760775701357</span
+          >
+          <ul class="social-links" data-testid="test-user-social-links">
+            <li data-testid="test-user-facebook">
+              <a
+                href="https://facebook.com/koolboy4u4real"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="https://cdn.simpleicons.org/facebook"
+                  alt="facebook
+                icon"
+              /></a>
+            </li>
+            <li data-testid="test-user-x">
+              <a
+                href="https://x.com/twizz4u "
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="https://cdn.simpleicons.org/x" alt="X icon"
+              /></a>
+            </li>
+            <li data-testid="test-user-instagram">
+              <a
+                href="https://instagram.com/twizz4u"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="https://cdn.simpleicons.org/instagram"
+                  alt="instagram icon"
+              /></a>
+            </li>
+            <li data-testid="test-user-linkedin">
+              <a
+                href="https://www.linkedin.com/in/aragbaiye-tiwatayo-37230b202/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg"
+                  alt="Linkdlin icon"
+              /></a>
+            </li>
+          </ul>
+          <section class="section">
+            <div>
+              <span data-testid="test-user-hobbies">Hobbies</span>
+              <ul>
+                <li>football</li>
+                <li>volleyball</li>
+                <li>music</li>
+              </ul>
+            </div>
+            <div>
+              <span data-testid="test-user-dislikes">Dislikes</span>
+              <ul>
+                <li>basketball</li>
+                <li>cricket</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
