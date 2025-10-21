@@ -8,11 +8,9 @@ const small = Array.from(document.querySelectorAll("small"));
 const textarea = document.querySelector("textarea");
 const success = document.querySelector(".success");
 
-console.log(inputs);
-
 const errormessges = ["name", "email", "subject", "textarea"];
 
-document.querySelector("form").addEventListener("submit", (e) => {
+document.querySelector("#contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
   isvalid = true;
   let firstInvalid = null;
