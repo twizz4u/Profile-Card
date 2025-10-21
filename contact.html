@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="body-form">
+    <span
+      class="success"
+      data-testid="test-contact-success"
+      role="status"
+      aria-live="polite"
+      >Successfully Sent
+      <i
+        class="fa-solid fa-circle-check"
+        style="color: rgb(98, 167, 98); font-size: 24px"
+      ></i>
+    </span>
+    <div class="container-form">
+      <div class="contact-box">
+        <div>
+          <img src="contact_1.jpg" alt="Contact image" class="contact-img" />
+        </div>
+        <div class="form-right">
+          <div aria-labelledby="contactHeading">
+            <h1 id="contactHeading">Get in Touch</h1>
+            <p>
+              I do love to hear from you! Whether you have a question, feedback,
+              or just want to say hello, feel free to reach out.
+            </p>
+          </div>
+          <form action="#" method="post">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              data-testid="test-contact-name"
+              aria-describedby="nameError"
+              aria-live="assertive"
+              aria-required="true"
+            />
+            <small id="nameError" data-testid="test-contact-error-name"></small>
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              data-testid="test-contact-email"
+              aria-describedby="emailError"
+              aria-live="assertive"
+              aria-required="true"
+            />
+            <small
+              id="emailError"
+              data-testid="test-contact-error-email"
+              role="alert"
+            ></small>
+
+            <label for="subject">Subject:</label>
+            <input
+              type="subject"
+              id="subject"
+              name="subject"
+              data-testid="test-contact-subject"
+              aria-describedby="subjectError"
+              aria-live="assertive"
+              aria-required="true"
+            />
+            <small
+              id="subjectError"
+              data-testid="test-contact-error-subject"
+              role="alert"
+            ></small>
+
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              data-testid="test-contact-message"
+              aria-describedby="messageError"
+              aria-live="assertive"
+              aria-required="true"
+            ></textarea>
+            <small
+              id="messageError"
+              data-testid="test-contact-error-message"
+              role="alert"
+            ></small>
+
+            <button
+              type="submit"
+              aria-label="Send Message"
+              data-testid="test-contact-submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

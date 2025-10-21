@@ -12,7 +12,7 @@
         <figure>
           <div>
             <img
-              src="https://avatar.iran.liara.run/public"
+              src="profile_me.png"
               alt="avatar image"
               data-testid="test-user-avatar"
             />
@@ -40,9 +40,10 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 ><img
-                  src="https://cdn.simpleicons.org/facebook"
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/facebook.svg"
                   alt="facebook
                 icon"
+                  class="facebook-icon"
               /></a>
             </li>
             <li data-testid="test-user-x">
@@ -50,7 +51,11 @@
                 href="https://x.com/twizz4u "
                 target="_blank"
                 rel="noopener noreferrer"
-                ><img src="https://cdn.simpleicons.org/x" alt="X icon"
+                ><img
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/x.svg
+"
+                  alt="X icon"
+                  class="x-icon"
               /></a>
             </li>
             <li data-testid="test-user-instagram">
@@ -59,8 +64,9 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 ><img
-                  src="https://cdn.simpleicons.org/instagram"
+                  src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/instagram.svg"
                   alt="instagram icon"
+                  class="instagram-icon"
               /></a>
             </li>
             <li data-testid="test-user-linkedin">
@@ -71,12 +77,13 @@
                 ><img
                   src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg"
                   alt="Linkdlin icon"
+                  class="linkedin-icon"
               /></a>
             </li>
           </ul>
           <section class="section">
             <div>
-              <span data-testid="test-user-hobbies">Hobbies</span>
+              <span class="hobby" data-testid="test-user-hobbies">Hobbies</span>
               <ul>
                 <li>football</li>
                 <li>volleyball</li>
@@ -84,13 +91,39 @@
               </ul>
             </div>
             <div>
-              <span data-testid="test-user-dislikes">Dislikes</span>
+              <span class="hobby" data-testid="test-user-dislikes"
+                >Dislikes</span
+              >
               <ul>
                 <li>basketball</li>
                 <li>cricket</li>
               </ul>
             </div>
           </section>
+          <nav>
+            <ul class="nav-links" data-testid="test-user-nav-links">
+              <li>
+                <a href="contact.html"
+                  >Contact
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/lucide-static/icons/mail.svg"
+                    alt="Contact"
+                    class="contact"
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="about.html"
+                  >About
+                  <img
+                    src="https://cdn.jsdelivr.net/npm/lucide-static/icons/user-circle.svg"
+                    alt="About"
+                    class="about"
+                  />
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </article>
     </div>
