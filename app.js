@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const textarea = document.querySelector("textarea");
   const success = document.querySelector(".success");
   const form = document.getElementById("contactForm");
+  const button = document.querySelector("[type=submit]");
 
   const errormessges = ["name", "email", "subject", "textarea"];
 
-  form.addEventListener("submit", (e) => {
+  button.addEventListener("click", (e) => {
     console.log("form submitted");
     e.preventDefault();
     isvalid = true;
