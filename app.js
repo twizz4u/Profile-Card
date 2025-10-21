@@ -10,65 +10,67 @@ const success = document.querySelector(".success");
 
 const errormessges = ["name", "email", "subject", "textarea"];
 
-document.querySelector("#contactForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  isvalid = true;
-  let firstInvalid = null;
-  inputs.forEach((input, index) => {
-    if (input.id == errormessges[index] && input.value == "") {
-      small[
-        index
-      ].textContent = `*missing ${errormessges[index]} input required`;
-      input.setAttribute("aria-invalid", "true");
-      if (!firstInvalid) firstInvalid = input;
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector("#contactForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    isvalid = true;
+    let firstInvalid = null;
+    inputs.forEach((input, index) => {
+      if (input.id == errormessges[index] && input.value == "") {
+        small[
+          index
+        ].textContent = `*missing ${errormessges[index]} input required`;
+        input.setAttribute("aria-invalid", "true");
+        if (!firstInvalid) firstInvalid = input;
+        isvalid = false;
+      } else if (input.value.length < 10) {
+        small[
+          index
+        ].textContent = `*${errormessges[index]} must be at least 10 characters`;
+        input.setAttribute("aria-invalid", "true");
+        if (!firstInvalid) firstInvalid = input;
+        isvalid = false;
+      } else {
+        small[index].textContent = "";
+        input.removeAttribute("aria-invalid");
+      }
+    });
+
+    if (textarea.value.trim() == "") {
+      small[inputs.length].textContent = `*missing message input required`;
+      textarea.setAttribute("aria-invalid", "true");
+      if (!firstInvalid) firstInvalid = textarea;
       isvalid = false;
-    } else if (input.value.length < 10) {
+    } else if (textarea.value.length < 10) {
       small[
-        index
-      ].textContent = `*${errormessges[index]} must be at least 10 characters`;
-      input.setAttribute("aria-invalid", "true");
-      if (!firstInvalid) firstInvalid = input;
+        inputs.length
+      ].textContent = `*message must be at least 10 characters`;
+      textarea.setAttribute("aria-invalid", "true");
+      if (!firstInvalid) firstInvalid = textarea;
       isvalid = false;
     } else {
-      small[index].textContent = "";
-      input.removeAttribute("aria-invalid");
+      small[inputs.length].textContent = "";
+      textarea.removeAttribute("aria-invalid");
     }
+
+    if (firstInvalid) {
+      firstInvalid.focus();
+    }
+
+    if (!isvalid) return;
+    success.classList.add("add");
+
+    inputs.forEach((input) => {
+      input.value = "";
+      input.style.borderColor = "#e6e9ef";
+    });
+    textarea.value = "";
+    textarea.style.borderColor = "#e6e9ef";
+
+    setTimeout(() => {
+      success.classList.remove("add");
+    }, 1200);
   });
-
-  if (textarea.value.trim() == "") {
-    small[inputs.length].textContent = `*missing message input required`;
-    textarea.setAttribute("aria-invalid", "true");
-    if (!firstInvalid) firstInvalid = textarea;
-    isvalid = false;
-  } else if (textarea.value.length < 10) {
-    small[
-      inputs.length
-    ].textContent = `*message must be at least 10 characters`;
-    textarea.setAttribute("aria-invalid", "true");
-    if (!firstInvalid) firstInvalid = textarea;
-    isvalid = false;
-  } else {
-    small[inputs.length].textContent = "";
-    textarea.removeAttribute("aria-invalid");
-  }
-
-  if (firstInvalid) {
-    firstInvalid.focus();
-  }
-
-  if (!isvalid) return;
-  success.classList.add("add");
-
-  inputs.forEach((input) => {
-    input.value = "";
-    input.style.borderColor = "#e6e9ef";
-  });
-  textarea.value = "";
-  textarea.style.borderColor = "#e6e9ef";
-
-  setTimeout(() => {
-    success.classList.remove("add");
-  }, 1200);
 });
 
 inputs.forEach((input, index) => {
