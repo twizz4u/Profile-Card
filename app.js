@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const errormessges = ["name", "email", "subject", "textarea"];
 
   form.addEventListener("submit", (e) => {
+    console.log("form submitted");
     e.preventDefault();
     isvalid = true;
     let firstInvalid = null;
